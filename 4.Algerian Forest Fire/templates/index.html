@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire Weather Index Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<!-- <body>
+    <div class="container">
+        <h2>Fire Weather Index Prediction</h2>
+        <form action="/predict" method="POST">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Temperature (°C):</label>
+                    <input type="text" class="form-control" name="Temperature" placeholder="Enter Temperature">
+                </div>
+                <div class="form-group">
+                    <label>Relative Humidity (%):</label>
+                    <input type="text" class="form-control" name="RH" placeholder="Enter RH">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Wind Speed (km/h):</label>
+                    <input type="text" class="form-control" name="Ws" placeholder="Enter Wind Speed">
+                </div>
+                <div class="form-group">
+                    <label>Rain (mm):</label>
+                    <input type="text" class="form-control" name="Rain" placeholder="Enter Rainfall">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Fine Fuel Moisture Code (FFMC):</label>
+                    <input type="text" class="form-control" name="FFMC" placeholder="Enter FFMC">
+                </div>
+                <div class="form-group">
+                    <label>Drought Code (DMC):</label>
+                    <input type="text" class="form-control" name="DMC" placeholder="Enter DMC">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Drought Code (DC):</label>
+                    <input type="text" class="form-control" name="DC" placeholder="Enter DC">
+                </div>
+                <div class="form-group">
+                    <label>Initial Spread Index (ISI):</label>
+                    <input type="text" class="form-control" name="ISI" placeholder="Enter ISI">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Buildup Index (BUI):</label>
+                    <input type="text" class="form-control" name="BUI" placeholder="Enter BUI">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+        <h3>{{ prediction_text }}</h3>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body> -->
+<body></body>
+    <div class="container">
+        <h2>Fire Weather Index Prediction</h2>
+        <form action="/predict" method="POST">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Temperature (°C):</label>
+                    <input type="text" name="Temperature" placeholder="Enter Temperature" value="{{ temperature }}">
+                </div>
+                <div class="form-group">
+                    <label>Relative Humidity (%):</label>
+                    <input type="text" name="RH" placeholder="Enter RH" value="{{ rh }}">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Wind Speed (km/h):</label>
+                    <input type="text" name="Ws" placeholder="Enter Wind Speed" value="{{ ws }}">
+                </div>
+                <div class="form-group">
+                    <label>Rain (mm):</label>
+                    <input type="text" name="Rain" placeholder="Enter Rainfall" value="{{ rain }}">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Fine Fuel Moisture Code (FFMC):</label>
+                    <input type="text" name="FFMC" placeholder="Enter FFMC" value="{{ ffmc }}">
+                </div>
+                <div class="form-group">
+                    <label>Drought Code (DMC):</label>
+                    <input type="text" name="DMC" placeholder="Enter DMC" value="{{ dmc }}">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Drought Code (DC):</label>
+                    <input type="text" name="DC" placeholder="Enter DC" value="{{ dc }}">
+                </div>
+                <div class="form-group">
+                    <label>Initial Spread Index (ISI):</label>
+                    <input type="text" name="ISI" placeholder="Enter ISI" value="{{ isi }}">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Buildup Index (BUI):</label>
+                    <input type="text" name="BUI" placeholder="Enter BUI" value="{{ bui }}">
+                </div>
+            </div>
+            <button type="submit">Predict</button>
+        </form>
+        <h3>{{ prediction_text }}</h3>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
